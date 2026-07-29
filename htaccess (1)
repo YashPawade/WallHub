@@ -1,0 +1,133 @@
+# ============================================
+# FORCE HTTPS - REDIRECT HTTP TO HTTPS
+# ============================================
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ============================================
+# BROWSER CACHING (Speeds up repeat visits)
+# ============================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images - Cache for 30 days
+    ExpiresByType image/jpg "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType image/gif "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    
+    # CSS & JavaScript - Cache for 7 days
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType text/javascript "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    
+    # HTML - No cache (always fresh)
+    ExpiresByType text/html "access plus 0 seconds"
+    
+    # Fonts - Cache for 1 year
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+</IfModule>
+
+# ============================================
+# COMPRESSION (Makes files smaller/faster)
+# ============================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# ============================================
+# CACHE FOR WALLPAPER IMAGES (serve_image.php)
+# ============================================
+<Files "serve_image.php">
+    Header set Cache-Control "max-age=604800, public"
+</Files>
+
+# ============================================
+# SECURITY HEADERS (Basic protection)
+# ============================================
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ============================================
+# PREVENT DIRECT ACCESS TO SENSITIVE FOLDERS
+# ============================================
+RedirectMatch 403 ^/includes/.*$
+RedirectMatch 403 ^/.*\.sql$
+RedirectMatch 403 ^/.*\.ini$
+RedirectMatch 403 ^/\.git/.*$
+RedirectMatch 403 ^/composer\.json$
+RedirectMatch 403 ^/composer\.lock$
+
+# ============================================
+# WALLHUB - CLEAN URL ROUTING
+# ============================================
+
+# If it's a real file or directory, STOP processing (for images, CSS, JS)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ============================================
+# REDIRECT .php URLs TO CLEAN URLs (FIXED!)
+# ============================================
+
+# Redirect index.php to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [R=301,L]
+
+# Redirect ANY .php file to extensionless URL
+# This covers: actress.php, contact.php, login.php, register.php, profile.php, categories.php, etc.
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.php\ HTTP/
+RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+
+# Also handle .php files with query strings
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.php\?([^\ ]+)\ HTTP/
+RewriteRule ^([^.]+)\.php$ /$1?%2 [R=301,L]
+
+# ============================================
+# INTERNAL REWRITES (What happens AFTER redirect)
+# ============================================
+
+# Map clean URLs to .php files for static pages
+# Example: /actress -> actress.php
+# Example: /contact -> contact.php
+# Example: /login -> login.php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# ============================================
+# 🟢 CHARACTER-SPECIFIC URLs (ADD THIS HERE!)
+# ============================================
+# Example: /onepiece/luffy → explore.php?slug=onepiece&character=luffy
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ explore.php?slug=$1&character=$2 [L,QSA]
+
+
+# ============================================
+# CATCH-ALL FOR DYNAMIC CONTENT
+# ============================================
+
+# Dynamic category routing (e.g., /onepunchman -> explore.php?slug=onepunchman)
+# This handles all anime, movie, and category pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ explore.php?slug=$1 [L,QSA]
+
+# Home page
+DirectoryIndex index.php
+
+# Custom 404 page
+ErrorDocument 404 /404.php
