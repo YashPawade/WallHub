@@ -201,7 +201,7 @@ WallHub covers **10+ categories**, including:
 | **Anime** | One Piece, Naruto, JJK, Bleach, Dragon Ball, Demon Slayer, AOT, MHA | Luffy, Naruto, Gojo, Goku, Tanjiro |
 | **Movies & TV** | Spider-Man, Avatar, Stranger Things, John Wick, Breaking Bad, The Witcher | Peter Parker, Jake Sully, Eleven |
 | **Nature** | Nature, Animals, Birds, Space, Fantasy | Landscapes, wildlife, galaxies |
-| **Gaming** | Gaming, Transformers | Various titles, Optimus Prime |
+| **Gaming** | Gaming | Various titles |
 | **Actresses** | Indian & International | — |
 
 </div>
