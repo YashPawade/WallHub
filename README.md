@@ -1,6 +1,8 @@
 <div align="center">
-    <img src="docs/assets/logo.png" alt="WallHub Logo" width="340" />
-    
+    <img src="docs/assets/logo.png" alt="WallHub Logo" width="140" />
+    <h1><b>WallHub</b></h1>
+    <p><b>The Ultimate Wallpaper Universe — Curated in 4K.</b></p>
+    <a href="https://wallhub.online"><img src="https://img.shields.io/badge/demo-wallhub.online-1e90ff?style=for-the-badge" alt="Live Demo" /></a>
 </div>
 
 <div align="center">
@@ -36,9 +38,21 @@
 
 ---
 
+<div align="center">
+
+### 📊 By the Numbers
+
+| 🖼️ Wallpapers | ⬇️ Downloads | 🗂️ Categories |
+| :---: | :---: | :---: |
+| **2K+** | **9M+** | **10+** |
+
+</div>
+
+---
+
 ## 📖 About WallHub
 
-**WallHub** is a custom-built wallpaper platform written in PHP and MySQL — no frameworks, no CMS, just a hand-rolled backend covering authentication, role-based access, download tracking, and a full admin dashboard. It serves wallpapers across **40+ categories**, from anime and movies to nature and gaming.
+**WallHub** is a custom-built wallpaper platform written in PHP and MySQL — no frameworks, no CMS, just a hand-rolled backend covering authentication, role-based access, download tracking, and a full admin dashboard. With **2,000+ wallpapers**, **9 million+ downloads**, and **10+ categories** spanning anime, movies, nature, and gaming, WallHub has grown into a genuinely large-scale wallpaper hub.
 
 > [!TIP]
 > Check out the live site at **[wallhub.online](https://wallhub.online)**.
@@ -178,7 +192,7 @@ Point your web server's document root at the project folder, enable `mod_rewrite
 
 ## <a id="-categories"></a>🎨 Categories
 
-WallHub covers **40+ categories**, including:
+WallHub covers **10+ categories**, including:
 
 <div align="center">
 
