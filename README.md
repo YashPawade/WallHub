@@ -1,6 +1,6 @@
 <div align="center">
     <img src="docs/assets/logo.png" alt="WallHub Logo" width="340" />
-    
+    <a href="https://wallhub.online"><img src="https://img.shields.io/badge/demo-wallhub.online-1e90ff?style=for-the-badge" alt="Live Demo" /></a>
 </div>
 
 <div align="center">
