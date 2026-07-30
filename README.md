@@ -1,8 +1,6 @@
 <div align="center">
-    <img src="docs/assets/logo.png" alt="WallHub Logo" width="140" />
-    <h1><b>WallHub</b></h1>
-    <p><b>The Ultimate Wallpaper Universe — Curated in 4K.</b></p>
-    <a href="https://wallhub.online"><img src="https://img.shields.io/badge/demo-wallhub.online-1e90ff?style=for-the-badge" alt="Live Demo" /></a>
+    <img src="docs/assets/logo.png" alt="WallHub Logo" width="440" />
+    
 </div>
 
 <div align="center">
