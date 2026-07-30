@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="docs/assets/logo.png" alt="WallHub Logo" width="440" />
+    <img src="docs/assets/logo.png" alt="WallHub Logo" width="340" />
     
 </div>
 
