@@ -95,25 +95,20 @@
 
 <div align="center">
 
+<h3>🏠 Homepage</h3>
+<img src="screenshots/Homepage.png" alt="Homepage" width="900" />
+
+<br/><br/>
+
 <table>
   <tr>
-    <td align="center" width="50%">
-      <b>🏠 Homepage</b><br/><br/>
-      <img src="screenshots/Homepage.png" alt="Homepage" width="100%" />
-    </td>
     <td align="center" width="50%">
       <b>🎨 Category Page</b><br/><br/>
       <img src="screenshots/Category.png" alt="Category Page" width="100%" />
     </td>
-  </tr>
-  <tr>
     <td align="center" width="50%">
       <b>❤️ Favorites</b><br/><br/>
       <img src="screenshots/Favorites.png" alt="Favorites" width="100%" />
-    </td>
-    <td align="center" width="50%">
-      <b>👑 Admin Panel</b><br/><br/>
-      <img src="screenshots/AdminPanel.png" alt="Admin Panel" width="100%" />
     </td>
   </tr>
 </table>
@@ -122,15 +117,26 @@
 
 <table>
   <tr>
-    <td align="center" width="33%">
+    <td align="center" width="50%">
+      <b>👑 Admin Panel</b><br/><br/>
+      <img src="screenshots/AdminPanel.png" alt="Admin Panel" width="100%" />
+    </td>
+    <td align="center" width="50%">
       <b>🔐 Login</b><br/><br/>
       <img src="screenshots/Login.png" alt="Login Page" width="100%" />
     </td>
-    <td align="center" width="33%">
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <td align="center" width="50%">
       <b>🙍 Profile</b><br/><br/>
       <img src="screenshots/Profile.png" alt="Profile Page" width="100%" />
     </td>
-    <td align="center" width="33%">
+    <td align="center" width="50%">
       <b>📱 Mobile View</b><br/><br/>
       <img src="screenshots/MobileView.png" alt="Mobile View" width="100%" />
     </td>
