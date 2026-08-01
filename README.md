@@ -26,6 +26,8 @@
   <h3>
     <a href="#-features">Features</a>
     <span> | </span>
+    <a href="#-screenshots">Screenshots</a>
+    <span> | </span>
     <a href="#-tech-stack">Tech Stack</a>
     <span> | </span>
     <a href="#-installation">Installation</a>
@@ -86,6 +88,56 @@
     </td>
   </tr>
 </table>
+
+---
+
+## <a id="-screenshots"></a>📸 Screenshots
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>🏠 Homepage</b><br/><br/>
+      <img src="screenshots/Homepage.png" alt="Homepage" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>🎨 Category Page</b><br/><br/>
+      <img src="screenshots/Category.png" alt="Category Page" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>❤️ Favorites</b><br/><br/>
+      <img src="screenshots/Favorites.png" alt="Favorites" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>👑 Admin Panel</b><br/><br/>
+      <img src="screenshots/AdminPanel.png" alt="Admin Panel" width="100%" />
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <b>🔐 Login</b><br/><br/>
+      <img src="screenshots/Login.png" alt="Login Page" width="100%" />
+    </td>
+    <td align="center" width="33%">
+      <b>🙍 Profile</b><br/><br/>
+      <img src="screenshots/Profile.png" alt="Profile Page" width="100%" />
+    </td>
+    <td align="center" width="33%">
+      <b>📱 Mobile View</b><br/><br/>
+      <img src="screenshots/MobileView.png" alt="Mobile View" width="100%" />
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ---
 
